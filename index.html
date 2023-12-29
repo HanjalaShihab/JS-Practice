@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Practice</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .main {
+            width: 80px;
+            height: 80px;
+            border-radius: 100%;
+            border: 10px solid #f3f3f3;
+            border-top: 10px solid #000000;
+            position: relative;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .child {
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            background-color: rgb(255, 255, 255);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="child"></div>
+    </div>
+    
+    <p id="test"></p>
+
+    <script src="test4.js"></script>
+</body>
+</html>
