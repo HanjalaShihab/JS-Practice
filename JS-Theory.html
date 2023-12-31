@@ -1,26 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Theory</title>
+    <style>
+        body {
+            font-size: 19px !important;
+            padding: 10px 0px 10px 30px;
+        }
+    </style>
 </head>
-<body style="text-align: center;">
-    <h2 style="color: rebeccapurple">JS Escape Sequence Characters</h2>
+
+<body>
+    <h2 style="color: rebeccapurple">JS Escape Sequence Characters:</h2>
     <p>JavaScript uses the \ (backslash) as an escape characters</p>
-    <div style="text-align: center; width: 400px; margin: 0 auto;">
+    <div>
         <ul style="text-align: left;">
             <li>\' single quote</li>
             <li>\" double quote</li>
-            <li>\  backslash</li>
+            <li>\ backslash</li>
             <li>\n new line</li>
             <li>\r carriage return</li>
             <li>\t tab</li>
             <li>\b backspace</li>
             <li>\f form feed</li>
-            <li>\v vertical tab (IE < 9 treats '\v' as 'v' instead of a vertical tab ('\x0B'). If cross-browser compatibility is a concern, use \x0B instead of \v.)</li>
-            <li>\0 null character (U+0000 NULL) (only if the next character is not a decimal digit; else it’s an octal escape sequence)</li>
+            <li>\v vertical tab (IE < 9 treats '\v' as 'v' instead of a vertical tab ('\x0B'). If cross-browser
+                    compatibility is a concern, use \x0B instead of \v.)</li>
+            <li>\0 null character (U+0000 NULL) (only if the next character is not a decimal digit; else it’s an octal
+                escape sequence)</li>
         </ul>
     </div>
+
+    <div style="margin: 50px auto;">
+        <h2 style="color: rebeccapurple">Template Literals:</h2>
+        <p> This is a concept where we can insert variables in console by using "backticks- ` ` ".</p>
+        <p style="color: rgb(255, 11, 105);">For instance:</p>
+        <pre style="text-align: left;">
+            <span style="color: blueviolet;">let</span> boy1 = <span style="color: rgb(255, 0, 38);">"</span><span style="color: rgb(247, 0, 255);">Shihab</span><span style="color: rgb(255, 0, 13);">"</span>;
+            <span style="color: blueviolet;">let</span> boy2 = <span style="color: rgb(255, 0, 0);">"</span><span style="color: rgb(247, 0, 255);">Faysal</span><span style="color: rgb(255, 0, 0);">"</span>;
+
+            <span style="color: rgb(255, 166, 0);">console</span>.log(`${boy1} is a friend of ${boy2}`);
+
+            //Output: Shihab is a friend of Faysal
+        </pre>
+
+        Using backticks will similarly print the output as a string like we use double quotes to print the strings.
+        but the only difference is that with backticks we can insert the variables as shown in the example above.
+
+        <span style="color: rgb(0, 26, 255);">**</span> We can insert variables in the template literals.This is called string interpolation.
+    </div>
 </body>
+
 </html>
