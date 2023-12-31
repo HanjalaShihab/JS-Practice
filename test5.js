@@ -34,7 +34,9 @@ console.log(numbers3);
                     //    2/ Index
                     //    3/ Array
 const numbers4 = [235,566,2463,4534,6575];
+
 numbers4.forEach(myFunction);
+
 function myFunction(value,index,array) {
     console.log(value);
     console.log(index);

@@ -14,42 +14,154 @@
 </head>
 
 <body>
-    <h2 style="color: rebeccapurple">JS Escape Sequence Characters:</h2>
+    <div>
+        <h2 style="color: rebeccapurple;">JS Data Types:</h2>
+        <p>There are 8 data types in JS.</p>
+        <ol style="text-align: left;">
+            <li>Number</li>
+            <li>String</li>
+            <li>Boolean</li>
+            <li>Undefined</li>
+            <li>Null</li>
+            <li>Object</li>
+            <li>Symbol</li>
+            <li>BigInt</li>
+        </ol>
+    </div>
+    <div>
+        <h2 style="color: rebeccapurple;">JS Variables:</h2>
+        <p>Variables are containers for storing data values.</p>
+        <p>JavaScript uses reserved keyword <span style="color: rgb(255, 0, 0);">var</span> to declare a variable.</p>
+        <p>JavaScript uses <span style="color: rgb(255, 0, 0);">let</span> keyword to declare a variable.</p>
+        <p>JavaScript uses <span style="color: rgb(255, 0, 0);">const</span> keyword to declare a variable.</p>
+        <p>Variables are case sensitive.</p>
+        <p>Variables can be declared without a value. In such case, it will be initialized with a default value <span
+                style="color: rgb(255, 0, 0);">undefined</span>.</p>
+        <p>Variables declared with <span style="color: rgb(255, 0, 0);">let</span> and <span
+                style="color: rgb(255, 0, 0);">const</span> are hoisted to the top of the block, but not initialized.
+        </p>
+        <p>Variables declared with <span style="color: rgb(255, 0, 0);">var</span> are hoisted to the top of the
+            function, but not initialized.</p>
+        <p>Variables declared with <span style="color: rgb(255, 0, 0);">let</span> and <span
+                style="color: rgb(255, 0, 0);">const</span> are block scoped.</p>
+        <p>Variables declared with <span style="color: rgb(255, 0, 0);">var</span> are function scoped.</p>
+        <p>Variables declared with <span style="color: rgb(255, 0, 0);">const</span> must be initialized with a value.
+        </p>
+        <p>Variables declared with <span style="color: rgb(255, 0, 0);">const</span> cannot be reassigned.</p>
+        <p>Variables declared with <span style="color: rgb(255, 0, 0);">const</span> cannot be redeclared.</p>
+    </div>
+    <div>
+        <h2 style="color: rebeccapurple; margin-top: 40px;">JS Escape Sequence Characters:</h2>
     <p>JavaScript uses the \ (backslash) as an escape characters</p>
     <div>
         <ul style="text-align: left;">
-            <li>\' single quote</li>
-            <li>\" double quote</li>
-            <li>\ backslash</li>
-            <li>\n new line</li>
-            <li>\r carriage return</li>
-            <li>\t tab</li>
-            <li>\b backspace</li>
-            <li>\f form feed</li>
-            <li>\v vertical tab (IE < 9 treats '\v' as 'v' instead of a vertical tab ('\x0B'). If cross-browser
-                    compatibility is a concern, use \x0B instead of \v.)</li>
-            <li>\0 null character (U+0000 NULL) (only if the next character is not a decimal digit; else it’s an octal
+            <li>\' &nbsp;&nbsp; single quote</li>
+            <li>\" &nbsp; double quote</li>
+            <li>\ &nbsp;&nbsp; backslash</li>
+            <li>\n &nbsp; new line</li>
+            <li>\r &nbsp;&nbsp;carriage return</li>
+            <li>\t &nbsp;&nbsp;tab</li>
+            <li>\b &nbsp;&nbsp;backspace</li>
+            <li>\f &nbsp;&nbsp;form feed</li>
+            <li>\v &nbsp;&nbsp;vertical tab (IE < 9 treats '\v' as 'v' instead of a vertical tab ('\x0B'). If
+                    cross-browser compatibility is a concern, use \x0B instead of \v.)</li>
+            <li>\0 &nbsp;&nbsp;null character (U+0000 NULL) (only if the next character is not a decimal digit; else
+                it’s an octal
                 escape sequence)</li>
         </ul>
+    </div>
+    </div>
+    <div>
+        <h2 style="color: rebeccapurple; margin-top: 40px;">String Methods:</h2>
+        <p>Strings are immutable. This means that once a string is created, it is not possible to modify it. However,
+            it is still possible to create another string based on an operation on the original string.</p>
+        <h4>1.<span style="color: rgb(228, 21, 156);">String Length</span></h4>
+        <p style="color: green;">Helps to find the length of a string.</p>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+<span>1. </span><span style="color: blueviolet;">let</span> name = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>;    
+<span>2. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span><span style="color: rgb(255, 255, 255);">name.<span style="color: rgb(0, 229, 255);">length</span></span><span style="color: rgb(252, 151, 0);">)</span>;
+    
+<span style="color: rgb(149, 149, 149);">//Output: 6</span>
+</pre>
+
+        <h4>2.<span style="color: rgb(228, 21, 156);">String toUpperCase()</span></h4>
+        <p style="color: green;">Converts the string to uppercase letters.</p>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+<span>1. </span><span style="color: blueviolet;">let</span> name = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>;
+<span>2. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span><span style="color: rgb(255, 255, 255);">name.<span style="color: rgb(0, 229, 255);">toUpperCase</span></span>()<span style="color: rgb(252, 151, 0);">)</span>;
+
+<span style="color: rgb(145, 145, 145);">//Output: SHIHAB</span>
+        </pre>
+
+        <h4>3.<span style="color: rgb(228, 21, 156);">String toLowerCase()</span></h4>
+        <p style="color: green;">Converts the string to lowercase letters.</p>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+<span>1. </span><span style="color: blueviolet;">let</span> name = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>;
+<span>2. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span><span style="color: rgb(255, 255, 255);">name.<span style="color: rgb(0, 229, 255);">toLowerCase</span></span>()<span style="color: rgb(252, 151, 0);">)</span>;
+
+<span style="color: rgb(145, 145, 145);">//Output: shihab</span>
+        </pre>
+
+        <h4>4.<span style="color: rgb(228, 21, 156);">String replace()</span></h4>
+        <p style="color: green;">Replaces a specified value with another value in a string.</p>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+<span>1. </span><span style="color: blueviolet;">let</span> name = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>;
+<span>2. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span><span style="color: rgb(255, 255, 255);">name.<span style="color: rgb(0, 229, 255);">replace</span></span>(<span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>, <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Faysal</span><span style="color: rgb(252, 151, 0);">"</span>)<span style="color: rgb(252, 151, 0);">)</span>;
+
+<span style="color: rgb(145, 145, 145);">//Output: Faysal</span>
+        </pre>
+
+        <h4>5.<span style="color: rgb(228, 21, 156);">String concat()</span></h4>
+        <p style="color: green;">Joins two or more strings, and returns a new joined strings.</p>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+<span>1. </span><span style="color: blueviolet;">let</span> name1 = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>;
+<span>2. </span><span style="color: blueviolet;">let</span> name2 = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Faysal</span><span style="color: rgb(252, 151, 0);">"</span>;
+
+<span>3. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span><span style="color: rgb(255, 255, 255);">name1.<span style="color: rgb(0, 229, 255);">concat</span></span>(<span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);"> is a friend of </span><span style="color: rgb(252, 151, 0);">"</span> + name2)<span style="color: rgb(252, 151, 0);">)</span>;
+
+<span style="color: rgb(145, 145, 145);">//Output: Shihab is a friend of Faysal</span>
+        </pre>
+
+        <h4>6.<span style="color: rgb(228, 21, 156);">String trim()</span></h4>
+        <p style="color: green;">Removes whitespace from both ends of a string.</p>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+<span>1. </span><span style="color: blueviolet;">let</span> name = <span style="color: rgb(252, 151, 0);">"     Shihab     "</span>;
+<span>2. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span><span style="color: rgb(255, 255, 255);">name1.<span style="color: rgb(0, 229, 255);">trim</span></span>(<span style="color: rgb(252, 151, 0);"></span>)<span style="color: rgb(252, 151, 0);">)</span>;
+
+<span style="color: rgb(145, 145, 145);">//Output: Shihab</span>
+        </pre>
+
+        <h4>7.<span style="color: rgb(228, 21, 156);">String slice()</span></h4>
+        <p style="color: green;">Extracts a part of a string and returns a new string.
+        This method takes 2 parameters: the starting index (position), and the ending index
+            (position).Also one parameter would also do.
+        If a parameter is negative, the position is counted from the end of the string.</p>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+<span>1. </span><span style="color: blueviolet;">let</span> name = <span style="color: rgb(252, 151, 0);">"Shihab"</span>;
+<span>2. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span><span style="color: rgb(255, 255, 255);">name1.<span style="color: rgb(0, 229, 255);">slice</span></span>(1,3)<span style="color: rgb(252, 151, 0);">)</span>;
+
+<span style="color: rgb(145, 145, 145);">//Output: hi</span>
+        </pre>
     </div>
 
     <div style="margin: 50px auto;">
         <h2 style="color: rebeccapurple">Template Literals:</h2>
         <p> This is a concept where we can insert variables in console by using "backticks- ` ` ".</p>
-        <p style="color: rgb(255, 11, 105);">For instance:</p>
-        <pre style="text-align: left;">
-            <span style="color: blueviolet;">let</span> boy1 = <span style="color: rgb(255, 0, 38);">"</span><span style="color: rgb(247, 0, 255);">Shihab</span><span style="color: rgb(255, 0, 13);">"</span>;
-            <span style="color: blueviolet;">let</span> boy2 = <span style="color: rgb(255, 0, 0);">"</span><span style="color: rgb(247, 0, 255);">Faysal</span><span style="color: rgb(255, 0, 0);">"</span>;
+        <p style="color: rgb(255, 11, 105); font-size: 21px !important;">For instance:</p>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+<span>1. </span><span style="color: blueviolet;">let</span> boy1 = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>;
+<span>2. </span><span style="color: blueviolet;">let</span> boy2 = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Faysal</span><span style="color: rgb(252, 151, 0);">"</span>;
 
-            <span style="color: rgb(255, 166, 0);">console</span>.log(`${boy1} is a friend of ${boy2}`);
+<span>3. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span>`${boy1} <span style="color: rgb(252, 151, 0);">is a friend of</span> ${boy2}`<span style="color: rgb(252, 151, 0);">)</span>;
 
-            //Output: Shihab is a friend of Faysal
-        </pre>
+<span style="color: rgb(149, 149, 149);">//Output: Shihab is a friend of Faysal</span>
+</pre>
 
         Using backticks will similarly print the output as a string like we use double quotes to print the strings.
         but the only difference is that with backticks we can insert the variables as shown in the example above.
 
-        <span style="color: rgb(0, 26, 255);">**</span> We can insert variables in the template literals.This is called string interpolation.
+        <span style="color: rgb(0, 26, 255);">**</span> We can insert variables in the template literals.This is called
+        string interpolation.
     </div>
 </body>
 
