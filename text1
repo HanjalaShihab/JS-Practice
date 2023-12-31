@@ -1,0 +1,10 @@
+Template Literals:
+This is a concept where we can insert variables in console by using "backticks- ` ` ".
+For instance: 
+let boy1 = "Shihab";
+let boy2 = "Faysal";
+
+console.log(`${boy1} is friend of ${boy2}`);
+
+using backticks will similarly print the output as a string like we use double quotes to print the strings.
+but the only difference is that with backticks we can insert the variables as shown in the example above.
