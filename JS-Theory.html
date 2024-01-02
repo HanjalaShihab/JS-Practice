@@ -14,6 +14,8 @@
 </head>
 
 <body>
+
+    <!-- JS Data types -->
     <div>
         <h2 style="color: rebeccapurple;">JS Data Types:</h2>
         <p>There are 8 data types in JS.</p>
@@ -28,6 +30,8 @@
             <li>BigInt</li>
         </ol>
     </div>
+
+    <!-- JS Variables -->
     <div>
         <h2 style="color: rebeccapurple;">JS Variables:</h2>
         <p>Variables are containers for storing data values.</p>
@@ -50,70 +54,80 @@
         <p>Variables declared with <span style="color: rgb(255, 0, 0);">const</span> cannot be reassigned.</p>
         <p>Variables declared with <span style="color: rgb(255, 0, 0);">const</span> cannot be redeclared.</p>
     </div>
+
+    <!-- JS Escape Sequences -->
     <div>
         <h2 style="color: rebeccapurple; margin-top: 40px;">JS Escape Sequence Characters:</h2>
-    <p>JavaScript uses the \ (backslash) as an escape characters</p>
-    <div>
-        <ul style="text-align: left;">
-            <li>\' &nbsp;&nbsp; single quote</li>
-            <li>\" &nbsp; double quote</li>
-            <li>\ &nbsp;&nbsp; backslash</li>
-            <li>\n &nbsp; new line</li>
-            <li>\r &nbsp;&nbsp;carriage return</li>
-            <li>\t &nbsp;&nbsp;tab</li>
-            <li>\b &nbsp;&nbsp;backspace</li>
-            <li>\f &nbsp;&nbsp;form feed</li>
-            <li>\v &nbsp;&nbsp;vertical tab (IE < 9 treats '\v' as 'v' instead of a vertical tab ('\x0B'). If
-                    cross-browser compatibility is a concern, use \x0B instead of \v.)</li>
-            <li>\0 &nbsp;&nbsp;null character (U+0000 NULL) (only if the next character is not a decimal digit; else
-                it’s an octal
-                escape sequence)</li>
-        </ul>
+        <p>JavaScript uses the \ (backslash) as an escape characters</p>
+        <div>
+            <ul style="text-align: left;">
+                <li>\' &nbsp;&nbsp; single quote</li>
+                <li>\" &nbsp; double quote</li>
+                <li>\ &nbsp;&nbsp; backslash</li>
+                <li>\n &nbsp; new line</li>
+                <li>\r &nbsp;&nbsp;carriage return</li>
+                <li>\t &nbsp;&nbsp;tab</li>
+                <li>\b &nbsp;&nbsp;backspace</li>
+                <li>\f &nbsp;&nbsp;form feed</li>
+                <li>\v &nbsp;&nbsp;vertical tab (IE < 9 treats '\v' as 'v' instead of a vertical tab ('\x0B'). If
+                        cross-browser compatibility is a concern, use \x0B instead of \v.)</li>
+                <li>\0 &nbsp;&nbsp;null character (U+0000 NULL) (only if the next character is not a decimal digit; else
+                    it’s an octal
+                    escape sequence)</li>
+            </ul>
+        </div>
     </div>
-    </div>
+
+    <!-- String methods -->
+
     <div>
         <h2 style="color: rebeccapurple; margin-top: 40px;">String Methods:</h2>
         <p>Strings are immutable. This means that once a string is created, it is not possible to modify it. However,
             it is still possible to create another string based on an operation on the original string.</p>
+
+        <!-- String length -->
         <h4>1.<span style="color: rgb(228, 21, 156);">String Length</span></h4>
         <p style="color: green;">Helps to find the length of a string.</p>
-        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
 <span>1. </span><span style="color: blueviolet;">let</span> name = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>;    
 <span>2. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span><span style="color: rgb(255, 255, 255);">name.<span style="color: rgb(0, 229, 255);">length</span></span><span style="color: rgb(252, 151, 0);">)</span>;
     
-<span style="color: rgb(149, 149, 149);">//Output: 6</span>
-</pre>
+<span style="color: rgb(149, 149, 149);">//Output: 6</span></pre>
 
+        <!-- String toUpperCase() -->
         <h4>2.<span style="color: rgb(228, 21, 156);">String toUpperCase()</span></h4>
         <p style="color: green;">Converts the string to uppercase letters.</p>
-        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
 <span>1. </span><span style="color: blueviolet;">let</span> name = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>;
 <span>2. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span><span style="color: rgb(255, 255, 255);">name.<span style="color: rgb(0, 229, 255);">toUpperCase</span></span>()<span style="color: rgb(252, 151, 0);">)</span>;
 
 <span style="color: rgb(145, 145, 145);">//Output: SHIHAB</span>
         </pre>
 
+        <!-- String toLowerCase() -->
         <h4>3.<span style="color: rgb(228, 21, 156);">String toLowerCase()</span></h4>
         <p style="color: green;">Converts the string to lowercase letters.</p>
-        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
 <span>1. </span><span style="color: blueviolet;">let</span> name = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>;
 <span>2. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span><span style="color: rgb(255, 255, 255);">name.<span style="color: rgb(0, 229, 255);">toLowerCase</span></span>()<span style="color: rgb(252, 151, 0);">)</span>;
 
 <span style="color: rgb(145, 145, 145);">//Output: shihab</span>
         </pre>
 
+        <!-- String replace() -->
         <h4>4.<span style="color: rgb(228, 21, 156);">String replace()</span></h4>
         <p style="color: green;">Replaces a specified value with another value in a string.</p>
-        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
 <span>1. </span><span style="color: blueviolet;">let</span> name = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>;
 <span>2. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span><span style="color: rgb(255, 255, 255);">name.<span style="color: rgb(0, 229, 255);">replace</span></span>(<span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>, <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Faysal</span><span style="color: rgb(252, 151, 0);">"</span>)<span style="color: rgb(252, 151, 0);">)</span>;
 
 <span style="color: rgb(145, 145, 145);">//Output: Faysal</span>
         </pre>
 
+        <!-- String concat() -->
         <h4>5.<span style="color: rgb(228, 21, 156);">String concat()</span></h4>
         <p style="color: green;">Joins two or more strings, and returns a new joined strings.</p>
-        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
 <span>1. </span><span style="color: blueviolet;">let</span> name1 = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>;
 <span>2. </span><span style="color: blueviolet;">let</span> name2 = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Faysal</span><span style="color: rgb(252, 151, 0);">"</span>;
 
@@ -122,21 +136,23 @@
 <span style="color: rgb(145, 145, 145);">//Output: Shihab is a friend of Faysal</span>
         </pre>
 
+        <!-- String trim() -->
         <h4>6.<span style="color: rgb(228, 21, 156);">String trim()</span></h4>
         <p style="color: green;">Removes whitespace from both ends of a string.</p>
-        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
 <span>1. </span><span style="color: blueviolet;">let</span> name = <span style="color: rgb(252, 151, 0);">"     Shihab     "</span>;
 <span>2. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span><span style="color: rgb(255, 255, 255);">name1.<span style="color: rgb(0, 229, 255);">trim</span></span>(<span style="color: rgb(252, 151, 0);"></span>)<span style="color: rgb(252, 151, 0);">)</span>;
 
 <span style="color: rgb(145, 145, 145);">//Output: Shihab</span>
         </pre>
 
+        <!-- String Slice() -->
         <h4>7.<span style="color: rgb(228, 21, 156);">String slice()</span></h4>
         <p style="color: green;">Extracts a part of a string and returns a new string.
-        This method takes 2 parameters: the starting index (position), and the ending index
+            This method takes 2 parameters: the starting index (position), and the ending index
             (position).Also one parameter would also do.
-        If a parameter is negative, the position is counted from the end of the string.</p>
-        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+            If a parameter is negative, the position is counted from the end of the string.</p>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
 <span>1. </span><span style="color: blueviolet;">let</span> name = <span style="color: rgb(252, 151, 0);">"Shihab"</span>;
 <span>2. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span><span style="color: rgb(252, 151, 0);">(</span><span style="color: rgb(255, 255, 255);">name1.<span style="color: rgb(0, 229, 255);">slice</span></span>(1,3)<span style="color: rgb(252, 151, 0);">)</span>;
 
@@ -144,11 +160,76 @@
         </pre>
     </div>
 
+    <!-- Array -->
+    <div style="margin: 50px auto;">
+        <h2 style="color: rebeccapurple">Array:</h2>
+        <p>Arrays are used to store multiple values in a single variable.</p>
+        <p>Arrays are a special type of objects.</p>
+        <p>Arrays use numbers to access its "elements". <span style="color: rgb(0, 142, 12);">//Numbers meant the indeces of the array.</span></p>
+        <p>Arrays are mutable.<span style="color: rgb(0, 142, 12);"> //That means array elements can be changed.</span></p>
+        <p>Arrays are passed by reference.</p>
+        <p>Arrays are compared by reference.</p>
+        <p>Arrays are converted to strings by joining all the elements with commas (,) in between.</p>
+        <p>It is a common practice to declare arrays with the <span style="color: red;">const</span> keyword.</p>
+        
+        <h4>Array declaration:</h4>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
+<span style="color: rgb(0, 229, 255);">const</span> fruits = [<span style="color: rgb(252, 151, 0);">"Banana"</span>, <span style="color: rgb(252, 151, 0);">"Orange"</span>, <span style="color: rgb(252, 151, 0);">"Apple"</span>, <span style="color: rgb(252, 151, 0);">"Mango"</span>];
+        </pre>
+        <p>Or,</p>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
+<span style="color: rgb(0, 229, 255);">const</span> numbers = [<span style="color: rgb(252, 151, 0);">50</span>, <span style="color: rgb(252, 151, 0);">60</span>, <span style="color: rgb(252, 151, 0);">40</span>, <span style="color: rgb(252, 151, 0);">80</span>];
+        </pre>
+
+        <p>We can also create an array, and then provide the elements:</p>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
+<span>1. <span style="color: rgb(0, 229, 255);">const</span> fruits = [];</span>
+
+<span>2. fruits[<span style="color: #80b6ff">0</span>] = <span style="color: rgb(252, 151, 0);">"Banana"</span>;</span>
+<span>3. fruits[<span style="color: #80b6ff">1</span>] = <span style="color: rgb(252, 151, 0);">"Orange"</span>;</span>
+<span>4. fruits[<span style="color: #80b6ff">2</span>] = <span style="color: rgb(252, 151, 0);">"Apple"</span>;</span>
+<span>5 .fruits[<span style="color: #80b6ff">3</span>] = <span style="color: rgb(252, 151, 0);">"Mango"</span>;</span>
+
+<span>6. <span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span>(fruits);</span>
+
+<span style="color: rgb(145, 145, 145);">//Output: [<span>"Banana"</span>, <span>"Orange"</span>, <span>"Apple"</span>, <span>"Mango"</span>]</span>
+        </pre>
+
+        <h4>Accessing array elements</h4>
+        <p>We can access the elements of an array with the help of it's index.</p>
+        <p>Array indexes start with 0.</p>
+        <h5>Example:</h5>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
+<span>1. <span style="color: rgb(0, 229, 255);">const</span> fruits = [<span style="color: rgb(252, 151, 0);">"Banana"</span>, <span style="color: rgb(252, 151, 0);">"Orange"</span>, <span style="color: rgb(252, 151, 0);">"Apple"</span>, <span style="color: rgb(252, 151, 0);">"Mango"</span>];</span>
+
+<span>2. <span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span>(fruits[<span style="color: #80b6ff">0</span>]);</span>
+
+<span style="color: rgb(145, 145, 145);">//Output: Banana</span>
+        </pre>
+        <p>**If we give an index which doesn't exist in the array then the output will be <span style="color: red; font-weight: bold;">Undefined.</span></p>
+
+        <!-- Array methods -->
+        <div style="margin-top: 50px;"></div>
+        <h3 style="color: rebeccapurple">Array Methods:</h3>
+        <p>There are many methods for arrays. Some of them are:</p>
+
+        <!-- Array length -->
+        <h4>1.<span style="color: rgb(228, 21, 156);">Array length</span></h4>
+        <p style="color: green;">Helps to find the length of an array.</p>
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
+<span>1. <span style="color: rgb(0, 229, 255);">const</span> fruits = [<span style="color: rgb(252, 151, 0);">"Banana"</span>, <span style="color: rgb(252, 151, 0);">"Orange"</span>, <span style="color: rgb(252, 151, 0);">"Apple"</span>, <span style="color: rgb(252, 151, 0);">"Mango"</span>];</span>
+
+<span>2 .<span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(255, 255, 8);">log</span>(fruits.<span style="color: rgb(0, 229, 255);">length</span>); <span style="color: rgb(145, 145, 145);">//Output: 4</span></span>
+        </pre>
+
+    </div>
+
+    <!-- Template literals -->
     <div style="margin: 50px auto;">
         <h2 style="color: rebeccapurple">Template Literals:</h2>
         <p> This is a concept where we can insert variables in console by using "backticks- ` ` ".</p>
         <p style="color: rgb(255, 11, 105); font-size: 21px !important;">For instance:</p>
-        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px; color: white;">
+        <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 20px 20px; color: white;">
 <span>1. </span><span style="color: blueviolet;">let</span> boy1 = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Shihab</span><span style="color: rgb(252, 151, 0);">"</span>;
 <span>2. </span><span style="color: blueviolet;">let</span> boy2 = <span style="color: rgb(252, 151, 0);">"</span><span style="color: rgb(252, 151, 0);">Faysal</span><span style="color: rgb(252, 151, 0);">"</span>;
 
