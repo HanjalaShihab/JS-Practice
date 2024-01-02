@@ -49,3 +49,4 @@ console.log(myName); //prints with space
 
 //but 
 console.log(myName.trim());
+//excludes the spaces before and after the string.
