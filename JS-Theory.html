@@ -233,7 +233,7 @@
 
 <span style="color: rgb(145, 145, 145);">//Output: Banana</span>
         </pre>
-                <p>**If we give an index which doesn't exist in the array then the output will be <span
+                <p><span style="color: blue;">**</span>If we give an index which doesn't exist in the array then the output will be <span
                                 style="color: red; font-weight: bold;">Undefined.</span></p>
 
                 <!-- Array methods -->
@@ -255,10 +255,10 @@
                 <!-- Array toString() -->
                 <h4>2.<span style="color: rgb(228, 21, 156);">Array toString()</span></h4>
                 <p style="color: green;">Converts an array to a string of (comma separated) array values.</p>
-                <p>**The returned string will separate the elements in the array with commas.</p>
+                <p><span style="color: blue;">**</span>The returned string will separate the elements in the array with commas.</p>
 
                 <h5>Example:</h5>
-                <p>**If we give an index which doesn't exist in the array then the output will be <span
+                <p><span style="color: blue;">**</span>If we give an index which doesn't exist in the array then the output will be <span
                                 style="color: red; font-weight: bold;">Undefined.</span></p>
                 <pre
                         style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
@@ -301,9 +301,9 @@
                 </pre>
 
                 <!-- Array pop() -->
-                <h4>3.<span style="color: rgb(228, 21, 156);">Array pop()</span></h4>
+                <h4>4.<span style="color: rgb(228, 21, 156);">Array pop()</span></h4>
                 <p style="color: green;">Removes the last element of an array, and returns that element.</p>
-                <p>**The pop() method returns the value that was "popped out":</p>
+                <p><span style="color: blue;">**</span>The pop() method returns the value that was "popped out":</p>
 
                 <h5>Example:</h5>
                 <pre
@@ -317,9 +317,9 @@
 
 
                 <!-- Array push() -->
-                <h4>4.<span style="color: rgb(228, 21, 156);">Array push()</span></h4>
+                <h4>5.<span style="color: rgb(228, 21, 156);">Array push()</span></h4>
                 <p style="color: green;">Adds new elements to the end of an array, and returns the new length.</p>
-                <p>**The push() method returns the new array length:</p>
+                <p><span style="color: blue;">**</span>The push() method returns the new array length:</p>
 
                 <h5>Example:</h5>
                 <pre
@@ -340,8 +340,52 @@
 <span style="color: rgb(145, 145, 145);">//Output: ["Banana", "Orange", "Apple", "Mango", "Kiwi"]</span></span>
         </pre>
 
-        <h4><strong>To remember:</strong> pop() function excludes the last element of the array and returns the poped element but push() adds the element at the end of the array.but just returns the length of the new array.
-        </h4>
+                <h4><strong>To remember:</strong> pop() function excludes the last element of the array and returns the
+                        poped element but push() adds the element at the end of the array.but just returns the length of
+                        the new array.
+                </h4>
+
+                <!-- Array shift() -->
+                <h4>6.<span style="color: rgb(228, 21, 156);">Array shift()</span></h4>
+                <p style="color: green;">The shift() method removes the first array element and "shifts" all other elements to a lower index.</p>
+                <p><span style="color: blue;">**</span>The shift() method returns the value that was "shifted out":</p>
+
+                <h5>Example:</h5>
+                <pre
+                        style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
+<span>1. <span style="color: rgb(0, 229, 255);">let</span> numbers = [<span style="color: rgb(252, 151, 0);">50</span>, <span style="color: rgb(252, 151, 0);">60</span>, <span style="color: rgb(252, 151, 0);">40</span>, <span style="color: rgb(252, 151, 0);">70</span>];</span>
+
+<span>2. <span style="color: rgb(0, 229, 255);">console</span>.<span style="color:yellow">log<span style="color: rgb(4, 109, 255);">(<span style="color: rgb(255, 255, 255);">numbers.<span style="color: rgb(0, 229, 255);">shift</span><span style="color: rgb(220, 34, 220);">()</span></span>)</span></span></span>;
+
+<span style="color: rgb(145, 145, 145);">//Output: 50</span></span>
+                </pre>
+
+                <!-- Array unshift() -->
+                <h4>7.<span style="color: rgb(228, 21, 156);">Array unshift()</span></h4>
+                <p style="color: green;">The unshift() method adds new items to the beginning of an array, and returns the new length.</p>
+                <p><span style="color: blue;">**</span>The unshift() method returns the new array length.</p>
+
+                <h5>Example:</h5>
+                <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
+<span>1. <span style="color: rgb(0, 229, 255);">let</span> numbers = [<span style="color: rgb(252, 151, 0);">50</span>, <span style="color: rgb(252, 151, 0);">60</span>, <span style="color: rgb(252, 151, 0);">40</span>, <span style="color: rgb(252, 151, 0);">70</span>];</span>
+
+<span>2. <span style="color: rgb(0, 229, 255);">console</span>.<span style="color:yellow">log<span style="color: rgb(4, 109, 255);">(<span style="color: rgb(255, 255, 255);">numbers.<span style="color: rgb(0, 229, 255);">unshift</span><span style="color: rgb(220, 34, 220);">(<span style="color: rgb(252, 151, 0);">10</span>)</span></span>)</span></span></span>;
+
+<span style="color: rgb(145, 145, 145);">//Output: 5</span></span>
+                </pre>
+
+                <p>So shift() function returned the new length of the array.</p>
+                <p>If we console 'numbers' now we will see the unshifted elemend at the starting of the array:</p>
+                <pre style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 10px 20px; color: white;">
+<span>2. <span style="color: rgb(0, 229, 255);">console</span>.<span style="color:yellow">log<span style="color: rgb(4, 109, 255);">(<span style="color: rgb(255, 255, 255);">numbers)</span></span></span>;
+
+<span style="color: rgb(145, 145, 145);">//Output: [10, 50, 60, 40, 70]</span></span>
+                </pre>
+
+                <h4><strong>To remember:</strong> shift() function excludes the first element of the array and returns the
+                        shifted element but unshift() adds the element at the beginning of the array.but just returns the length of
+                        the new array.
+                </h4>
         </div>
 
         <!-- Template literals -->
