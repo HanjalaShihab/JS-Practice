@@ -1,9 +1,19 @@
-let numbers = [50,760,30,560];
+//Use of Array.from() method:
 
-console.log(numbers.unshift(100));
+let name = "Shihab";
 
-console.log(numbers);
+let a = Array.from(name);
 
-let a = numbers.unshift(100);
+console.log(a);
 
-console.log(typeof numbers);
+//We can that name = "Shihab" was a string but by using Array.form() method we turned that into Array.
+//And **Array.from() method is specially used to turn the HTML Collections into array.Where we can't use forEach() function.
+
+
+let LangName = "JavaScript";
+
+let b = Array.from(LangName);
+
+console.log(b);
+
+

@@ -34,3 +34,10 @@ console.log(sum(4,6));
 function sum(a, b) {
     return a + b;
 }
+
+
+////
+
+let sum = (x, y) => x * y;
+
+console.log(sum(4, 6));
