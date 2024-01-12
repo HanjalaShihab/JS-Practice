@@ -1,4 +1,4 @@
-//Basic of a fucntion.
+//Basic of function.
 let name = "Harry";
 let name1 = "Shihab"
 let name2 = "Kabir";
