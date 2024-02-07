@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(to right, rgb(74, 226, 237), rgb(91, 91, 253));
+        }
+
+        .Hour,
+        .Minutes,
+        .Seconds {
+            font-size: 80px;
+            margin: 0 20px;
+            padding: 16px 16px;
+            /* From https://css.glass */
+            background: rgba(27, 251, 213, 0.54);
+            border-radius: 6px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10.5px);
+            -webkit-backdrop-filter: blur(10.5px);
+            border: 1px solid rgba(27, 251, 213, 0.54);
+            color: rgb(255, 255, 255);
+        }
+
+        .main h1 {
+            font-size: 100px;
+            color: rgb(29, 92, 3);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="Hour" id="Hour">
+            <script>
+                setInterval(myTimer, 1000);
+
+                function myTimer() {
+                    const d = new Date();
+
+                    document.getElementById("Hour").innerHTML = d.getHours();
+
+                    let x = d.getHours();
+                    if (x > 12) {
+                        x = x - 12;
+                        document.getElementById("Hour").innerHTML = x;
+                    }
+
+                    if (x < 10) {
+                        document.getElementById("Hour").innerHTML = "0" + x;
+                    }
+                    else {
+                        document.getElementById("Hour").innerHTML = x;
+
+                    }
+                }
+            </script>
+        </div>
+        <h1>:</h1>
+        <div class="Minutes" id="Minutes">
+            <script>
+                setInterval(myTimers, 1000);
+
+                function myTimers() {
+                    const d = new Date();
+
+                    document.getElementById("Minutes").innerHTML = d.getMinutes();
+                    let x = d.getMinutes();
+
+                    if (x < 10) {
+                        document.getElementById("Minutes").innerHTML = "0" + x;
+                    }
+                    else {
+                        document.getElementById("Minutes").innerHTML = x;
+                    }
+                }
+            </script>
+        </div>
+        <h1>:</h1>
+        <div class="Seconds" id="Seconds">
+            <script>
+                setInterval(myTimer, 1000);
+
+                function myTimer() {
+                    const d = new Date();
+
+                    document.getElementById("Seconds").innerHTML = d.getSeconds();
+
+                    let x = d.getSeconds();
+
+                    if (x < 10) {
+                        document.getElementById("Seconds").innerHTML = "0" + x;
+                    }
+                    else {
+                        document.getElementById("Seconds").innerHTML = x;
+
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
