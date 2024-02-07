@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <style>
+        .main {
+            display: flex;
+            margin: 10px 0px 0px 200px;
+        }
+
+        .main input {
+            width: 180px;
+            height: 30px;
+        }
+
+        button {
+            width: 80px;
+            height: 35px;
+            background-color: rgb(252, 11, 11);
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 67px;
+        }
+
+        .main p {
+            font-size: 27px;
+        }
+
+        .final {
+            margin: 0px 0px 0px 200px;
+            display: flex;
+        }
+
+        .final p {
+            font-size: 23px;
+            margin: 0px 20px 0px 0px;
+        }
+
+        .final2 {
+            margin: 0px 0px 0px 200px;
+        }
+
+        .final2 p {
+            font-size: 23px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="margin: 100px 0px 0px 200px;">Enter your Date of birth:</h2>
+    <div class="main">
+        <div id="days" style="margin-right: 6px;">
+            <h2>Day:</h2>
+            <input type="number" id="inp1" min="1" max="31" required>
+            <p id="demo1"></p>
+        </div>
+        <div id="month" style="margin-right: 6px;">
+            <h2>Month:</h2>
+            <input type="number" id="inp2" min="1" max="12" required>
+            <p id="demo2"></p>
+        </div>
+        <div id="year" style="margin-right: 6px;">
+            <h2>Year:</h2>
+            <input type="number" id="inp3" min="1900" required>
+            <p id="demo3"></p>
+        </div>
+
+        <button type="submit" onclick="myFunction()">SUBMIT</button>
+
+        <script>
+            function myFunction() {
+                const input1 = document.getElementById("inp1");
+                const input2 = document.getElementById("inp2");
+                const input3 = document.getElementById("inp3");
+
+                document.getElementById("demo1").innerHTML = "Day: " + input1.value;
+                document.getElementById("demo2").innerHTML = "Month: " + input2.value;
+                document.getElementById("demo3").innerHTML = "Year: " + input3.value;
+
+                if (input1.value > 31) {
+                    alert("Please enter a valid day");
+                }
+                if (input2.value > 12) {
+                    alert("Please enter a valid month");
+                }
+
+                const d = new Date();
+                const year = d.getFullYear();
+
+                let finalYear = year - input3.value - 1;
+
+                document.getElementById("finalYear").innerHTML = finalYear + " years";
+
+                let finalMonth = 12 - input2.value;
+
+                document.getElementById("finalMonth").innerHTML = finalMonth + 1 + " months";
+
+                let totalMonths = finalYear * 12 + (finalMonth + 1);
+
+                document.getElementById("totalMonths").innerHTML = totalMonths + " months";
+
+                let show1 = document.getElementById("header");
+                show1.style.display = "block";
+                let show2 = document.getElementById("final1");
+                show2.style.display = "block";
+                let show3 = document.getElementById("final2");
+                show3.style.display = "block";
+            }
+        </script>
+    </div>
+
+    <h2 style="margin: 0px 0px 0px 200px; display: none;" id="header">Your age:</h2>
+    <div class="final" id="final1" style="display: none;">
+        <p id="finalYear"></p>
+        <p id="finalMonth"></p>
+    </div>
+
+    <div class="final2" id="final2" style="display: none;">
+        <h4>Or,</h4>
+        <p id="totalMonths"></p>
+    </div>
+</body>
+
+</html>
