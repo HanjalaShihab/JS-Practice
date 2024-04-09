@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized custom</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgba(5, 5, 17, 0.951);
+            overflow: hidden;
+        }
+
+        .cursor {
+            position: absolute;
+            width: 21px;
+            height: 21px;
+            border: 1px solid rgb(255, 10, 31);
+            border-radius: 50%;
+            transition-duration: 200ms;
+            transition-timing-function: ease-out;
+            transform: scale(1);
+        }
+
+        nav {
+            width: 800px;
+            margin: 0 auto;
+            height: 120px;
+            background-color: rgb(28, 14, 71);
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            overflow: hidden;
+        }
+
+        nav ul {
+            position: relative;
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+
+        nav ul li a {
+            color: white;
+            display: block;
+            margin: 0px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Courier New', Courier, monospace;
+            letter-spacing: 2.2px;
+            font-size: 19px;
+        }
+
+        .span {
+            font-size: 19px;
+        }
+
+        .span:hover {
+            font-size: 30px;
+            color: red;
+        }
+
+        nav ul li a:hover {
+            transform: scale(1.3);
+            cursor: none;
+        }
+
+        .cursor.hovered {
+            transform: scale(2.8);
+            border: 2px solid white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="cursor"></div>
+
+    <nav>
+        <ul>
+            <li><a href="#"><span class="span">H</span><span class="span">O</span><span class="span">M</span><span
+                        class="span">E</span></a></li>
+            <li><a href="#"><span class="span">E</span><span class="span">D</span><span class="span">U</span><span
+                        class="span">C</span><span class="span">A</span><span class="span">T</span><span
+                        class="span">I</span><span class="span">O</span><span class="span">N</span></a></li>
+            <li><a href="#"><span class="span">S</span><span class="span">K</span><span class="span">I</span><span
+                        class="span">L</span><span class="span">L</span><span class="span">S</span></a></li>
+            <li><a href="#"><span class="span">S</span><span class="span">E</span><span class="span">R</span><span
+                        class="span">V</span><span class="span">I</span><span class="span">C</span><span
+                        class="span">E</span></a></li>
+            <li><a href="#"><span class="span">C</span><span class="span">O</span><span class="span">N</span><span
+                        class="span">T</span><span class="span">A</span><span class="span">C</span><span
+                        class="span">T</span><span class="span">S</span></a></li>
+        </ul>
+    </nav>
+
+    <script>
+        const cursor = document.querySelector(".cursor");
+        const navItems = document.querySelectorAll("nav ul li a");
+
+        navItems.forEach(item => {
+            item.addEventListener("mouseover", () => {
+                cursor.classList.add("hovered");
+            });
+
+            item.addEventListener("mouseout", () => {
+                cursor.classList.remove("hovered");
+            });
+        });
+
+        document.addEventListener("mousemove", e => {
+            cursor.style.left = (e.pageX - 10) + "px";
+            cursor.style.top = (e.pageY - 10) + "px";
+        });
+    </script>
+
+</body>
+
+</html>

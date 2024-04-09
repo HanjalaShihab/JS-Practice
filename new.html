@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .zoom-cursor {
+            cursor: url('zoom-in-out-cursor.png') 16 16, auto;
+        }
+
+        .custom-cursor {
+            cursor: url('custom-cursor.png') 16 16, auto;
+        }
+        
+        .zoom-cursor {
+            cursor: url('zoom-in-out-cursor.png') 16 16, auto;
+        }
+    </style>
+<body>
+    <h1 class="zoom-cursor">Hello, World!</h1>
+    <p class="zoom-cursor">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <script>
+        // Add event listeners to zoom in and out on mouseover
+        var zoomIn = function(event) {
+            event.target.style.fontSize = 'larger';
+        };
+
+        var zoomOut = function(event) {
+            event.target.style.fontSize = 'initial';
+        };
+
+        var zoomElements = document.getElementsByClassName('zoom-cursor');
+        for (var i = 0; i < zoomElements.length; i++) {
+            zoomElements[i].addEventListener('mouseover', zoomIn);
+            zoomElements[i].addEventListener('mouseout', zoomOut);
+        }
+    </script>
+</body>
+</html>
