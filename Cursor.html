@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customized custom</title>
+    <title>Hanjala Shihab</title>
     <style>
         * {
             margin: 0;
@@ -21,7 +20,7 @@
             position: absolute;
             width: 21px;
             height: 21px;
-            border: 1px solid rgb(255, 10, 31);
+            border: 1px solid rgb(255, 13, 13);
             border-radius: 50%;
             transition-duration: 200ms;
             transition-timing-function: ease-out;
@@ -56,7 +55,7 @@
             font-weight: bold;
             font-family: 'Courier New', Courier, monospace;
             letter-spacing: 2.2px;
-            font-size: 19px;
+            font-size: 20px;
         }
 
         .span {
@@ -76,6 +75,14 @@
         .cursor.hovered {
             transform: scale(2.8);
             border: 2px solid white;
+            background-color: black;
+        }
+
+        /* About */
+        .about {
+            color: white;
+            width: 800px;
+            background-color: red;
         }
     </style>
 </head>
@@ -83,10 +90,10 @@
 <body>
     <div class="cursor"></div>
 
-    <nav>
+    <nav class="navbar">
         <ul>
-            <li><a href="#"><span class="span">H</span><span class="span">O</span><span class="span">M</span><span
-                        class="span">E</span></a></li>
+            <li><a href="#"><span class="span">A</span><span class="span">B</span><span class="span">O</span><span
+                        class="span">U</span><span class="span">T</span></a></li>
             <li><a href="#"><span class="span">E</span><span class="span">D</span><span class="span">U</span><span
                         class="span">C</span><span class="span">A</span><span class="span">T</span><span
                         class="span">I</span><span class="span">O</span><span class="span">N</span></a></li>
@@ -100,6 +107,24 @@
                         class="span">T</span><span class="span">S</span></a></li>
         </ul>
     </nav>
+
+    <div class="about">
+        <h2>ABOUT</h2>
+        <div class="img">
+            <img src="" alt="">
+        </div>
+        <div class="text">
+            <p>I am Hanjala Muhammad Shihab.</p>
+            <p>I am a <span class="typed">passionate web developer.</span></p>
+            <p>I am someone who finds joy 
+                in exploring diverse cultures 
+                and cuisines, feeling rejuvenated
+                 amidst nature's embrace. Creativity
+                  is my outlet, whether through painting 
+                  or writing, and music holds the key to uplifting my spirits. Maintaining a healthy lifestyle through physical activity is vital to me, as is cherishing quality time with loved ones. Immersing myself in books and traveling to new destinations fuel my curiosity and sense of adventure. The arts captivate me, be it through gallery visits or attending live performances. 
+                Ultimately, forging genuine connections with others based on trust and understanding is at the core of who I am.</p>
+        </div>
+    </div>
 
     <script>
         const cursor = document.querySelector(".cursor");

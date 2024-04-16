@@ -13,7 +13,7 @@
 
                 .dark-mode {
                         background-color: black;
-                        color: white;
+                        color: rgb(203, 203, 203);
                         transition: 0.2s ease-in-out;
                 }
 
@@ -44,6 +44,7 @@
                 ::-webkit-scrollbar-thumb {
                         background-color: rgb(255, 0, 0);
                         border-radius: 8px;
+                        cursor: pointer;
                 }
 
                 ::-webkit-scrollbar-track {
@@ -603,6 +604,159 @@
                 <span style="color: rgb(0, 26, 255);">**</span> We can insert variables in the template literals.This is
                 called
                 string interpolation.
+        </div>
+
+        <div class="insertion-methods">
+                <h2>Insertion Methods:</h2>
+                <h2>create-element:</h2>
+                <p>It is used to create an element in the DOM(Document Object Model).</p>
+                <p>It is used to create an element with the specified tag name.</p>
+
+                <h5>Example:</h5>
+                <pre
+                        style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 20px 20px; color: white;">
+<span>1. </span><span style="color: rgb(0, 229, 255);">let</span> para = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">createElement</span>(<span style="color: rgb(252, 151, 0);">"p"</span>);
+<span>2. </span>para.<span style="color: rgb(0, 229, 255);">innerHTML</span> = <span style="color: rgb(252, 151, 0);">"This is a paragraph"</span>;
+<span>3. </span><span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">body</span>.<span style="color: rgb(0, 229, 255);">appendChild</span>(para);
+</pre>
+
+                <p>So, this will create a paragraph element in the body of the document with the text "This is a
+                        paragraph".</p>
+
+                <h2>createTextNode:</h2>
+                <p>It is used to create a text node in the DOM(Document Object Model).</p>
+                <p>It is used to create a text node with the specified text.</p>
+
+                <h5>Example:</h5>
+                <pre
+                        style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 20px 20px; color: white;">
+<span>1. </span><span style="color: rgb(0, 229, 255);">let</span> para = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">createElement</span>(<span style="color: rgb(252, 151, 0);">"p"</span>);
+<span>2. </span><span style="color: rgb(0, 229, 255);">let</span> text = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">createTextNode</span>(<span style="color: rgb(252, 151, 0);">"This is a paragraph"</span>);
+<span>3. </span>para.<span style="color: rgb(0, 229, 255);">appendChild</span>(text);
+<span>4. </span><span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">body</span>.<span style="color: rgb(0, 229, 255);">appendChild</span>(para);
+</pre>
+
+                <p>So, this will create a paragraph element in the body of the document with the text "This is a
+                        paragraph".</p>
+
+                <h2>insertBefore:</h2>
+                <p>It is used to insert a new node before a specified node in the DOM(Document Object Model).</p>
+                <p>It is used to insert a new node with the specified tag name before a specified node.</p>
+
+                <h5>Example:</h5>
+                <pre
+                        style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 20px 20px; color: white;">
+<span>1. </span><span style="color: rgb(0, 229, 255);">let</span> para = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">createElement</span>(<span style="color: rgb(252, 151, 0);">"p"</span>);
+<span>2. </span>para.<span style="color: rgb(0, 229, 255);">innerHTML</span> = <span style="color: rgb(252, 151, 0);">"This is a paragraph"</span>;
+<span>3. </span><span style="color: rgb(0, 229, 255);">let</span> h1 = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">getElementById</span>(<span style="color: rgb(252, 151, 0);">"heading"</span>);
+<span>4. </span><span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">body</span>.<span style="color: rgb(0, 229, 255);">insertBefore</span>(para, h1);
+</pre>
+
+                <p>So, this will create a paragraph element in the body of the document with the text "This is a
+                        paragraph" before the element with the id "heading".</p>
+
+                <h2>removeChild:</h2>
+                <p>It is used to remove a child node from the DOM(Document Object Model).</p>
+                <p>It is used to remove a child node with the specified tag name.</p>
+
+                <h5>Example:</h5>
+                <pre
+                        style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 20px 20px; color: white;">
+<span>1. </span><span style="color: rgb(0, 229, 255);">let</span> para = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">getElementById</span>(<span style="color: rgb(252, 151, 0);">"para"</span>);
+<span>2. </span><span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">body</span>.<span style="color: rgb(0, 229, 255);">removeChild</span>(para);
+</pre>
+
+                <p>So, this will remove the element with the id "para" from the body of the document.</p>
+
+                <h2>replaceChild:</h2>
+                <p>It is used to replace a child node with a new node in the DOM(Document Object Model).</p>
+
+                <h5>Example:</h5>
+                <pre
+                        style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 20px 20px; color: white;">
+<span>1. </span><span style="color: rgb(0, 229, 255);">let</span> para = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">createElement</span>(<span style="color: rgb(252, 151, 0);">"p"</span>);
+<span>2. </span>para.<span style="color: rgb(0, 229, 255);">innerHTML</span> = <span style="color: rgb(252, 151, 0);">"This is a paragraph"</span>;
+<span>3. </span><span style="color: rgb(0, 229, 255);">let</span> h1 = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">getElementById</span>(<span style="color: rgb(252, 151, 0);">"heading"</span>);
+<span>4. </span><span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">body</span>.<span style="color: rgb(0, 229, 255);">replaceChild</span>(para, h1);
+</pre>
+
+                <p>So, this will create a paragraph element in the body of the document with the text "This is a
+                        paragraph" and replace the element with the id "heading" with the paragraph element.</p>
+
+                <h2>setAttribute:</h2>
+                <p>It is used to set an attribute for an element in the DOM(Document Object Model).</p>
+
+                <h5>Example:</h5>
+                <pre
+                        style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 20px 20px; color: white;">
+<span>1. </span><span style="color: rgb(0, 229, 255);">let</span> para = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">createElement</span>(<span style="color: rgb(252, 151, 0);">"p"</span>);
+<span>2. </span>para.<span style="color: rgb(0, 229, 255);">innerHTML</span> = <span style="color: rgb(252, 151, 0);">"This is a paragraph"</span>;
+<span>3. </span>para.<span style="color: rgb(0, 229, 255);">setAttribute</span>(<span style="color: rgb(252, 151, 0);">"id"</span>, <span style="color: rgb(252, 151, 0);">"para"</span>);
+<span>4. </span><span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">body</span>.<span style="color: rgb(0, 229, 255);">appendChild</span>(para);
+</pre>
+
+                <p>So, this will create a paragraph element in the body of the document with the text "This is a
+                        paragraph" and set the id attribute of the paragraph element to "para".</p>
+
+                <h2>getAttribute:</h2>
+                <p>It is used to get the value of an attribute for an element in the DOM(Document Object Model).</p>
+
+                <h5>Example:</h5>
+                <pre
+                        style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 20px 20px; color: white;">
+<span>1. </span><span style="color: rgb(0, 229, 255);">let</span> para = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">getElementById</span>(<span style="color: rgb(252, 151, 0);">"para"</span>);
+<span>2. </span><span style="color: rgb(0, 229, 255);">let</span> id = para.<span style="color: rgb(0, 229, 255);">getAttribute</span>(<span style="color: rgb(252, 151, 0);">"id"</span>);
+<span>3. </span><span style="color: rgb(0, 229, 255);">console</span>.<span style="color: rgb(0, 229, 255);">log</span>(id);
+</pre>
+
+                <p>So, this will get the value of the id attribute of the element with the id "para" and log it to the
+                        console.</p>
+
+                <h2>removeAttribute:</h2>
+                <p>It is used to remove an attribute for an element in the DOM(Document Object Model).</p>
+
+                <h5>Example:</h5>
+                <pre
+                        style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 20px 20px; color: white;">
+<span>1. </span><span style="color: rgb(0, 229, 255);">let</span> para = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">getElementById</span>(<span style="color: rgb(252, 151, 0);">"para"</span>);
+<span>2. </span>para.<span style="color: rgb(0, 229, 255);">removeAttribute</span>(<span style="color: rgb(252, 151, 0);">"id"</span>);
+</pre>
+
+                <p>So, this will remove the id attribute of the element with the id "para".</p>
+
+                <h2>classList:</h2>
+                <p>It is used to add, remove, or toggle classes for an element in the DOM(Document Object Model).</p>
+
+                <h5>Example:</h5>
+                <p>Adding a class:</p>
+                <pre
+                        style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 20px 20px; color: white;">
+<span>1. </span><span style="color: rgb(0, 229, 255);">let</span> para = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">getElementById</span>(<span style="color: rgb(252, 151, 0);">"para"</span>);
+<span>2. </span>para.<span style="color: rgb(0, 229, 255);">classList</span>.<span style="color: rgb(0, 229, 255);">add</span>(<span style="color: rgb(252, 151, 0);">"highlight"</span>);
+</pre>
+
+                <p>So, this will add the class "highlight" to the element with the id "para".</p>
+
+                <p>Removing a class:</p>
+                <pre
+                        style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 20px 20px; color: white;">
+<span>1. </span><span style="color: rgb(0, 229, 255);">let</span> para = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">getElementById</span>(<span style="color: rgb(252, 151, 0);">"para"</span>);
+<span>2. </span>para.<span style="color: rgb(0, 229, 255);">classList</span>.<span style="color: rgb(0, 229, 255);">remove</span>(<span style="color: rgb(252, 151, 0);">"highlight"</span>);
+</pre>
+
+                <p>So, this will remove the class "highlight" from the element with the id "para".</p>
+
+                <p>Toggling a class:</p>
+                <pre
+                        style="text-align: left; background-color: rgb(0, 0, 0); width: fit-content; padding: 20px 10px 20px 20px; color: white;">
+<span>1. </span><span style="color: rgb(0, 229, 255);">let</span> para = <span style="color: rgb(0, 229, 255);">document</span>.<span style="color: rgb(0, 229, 255);">getElementById</span>(<span style="color: rgb(252, 151, 0);">"para"</span>);
+<span>2. </span>para.<span style="color: rgb(0, 229, 255);">classList</span>.<span style="color: rgb(0, 229, 255);">toggle</span>(<span style="color: rgb(252, 151, 0);">"highlight"</span>);
+</pre>
+
+                <p>So, this will toggle the class "highlight" for the element with the id "para". If the class is
+                        present, it will be removed. If the class is not present, it will be added.</p>
+
+
         </div>
 
 
